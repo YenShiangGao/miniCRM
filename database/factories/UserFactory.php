@@ -42,4 +42,11 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    public function configure(): Factory|UserFactory
+    {
+        return $this->afterCreating(function (\App\Models\User $user) {
+            $user->assignRole('user');
+        });
+    }
 }
