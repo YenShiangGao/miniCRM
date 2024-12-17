@@ -13,7 +13,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('users', \App\Http\Controllers\UserController::class)
-        ->middleware(['role:' . \App\RoleEnum::ADMIN->value]);
+        ->middleware('can:'.\App\Enums\PermissionEnum::MANAGE_USERS->value);
     Route::resource('clients', \App\Http\Controllers\ClientController::class);
     Route::resource('projects', \App\Http\Controllers\ProjectController::class);
     Route::resource('tasks', \App\Http\Controllers\TaskController::class);
