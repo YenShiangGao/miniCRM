@@ -1,6 +1,20 @@
 <h1 align="center">Laravel 11 小型 CRM 系統</h1>
 
+
+## 簡介
+
 [TOC]
+
+## 預覽圖
+
+![login](./image/login.png)
+
+![client](./image/client.png)
+
+![user-profile](./image/user-profile.png)
+
+![task](./image/task.png)
+
 
 ## 簡介
 laravel 11 小型 CRM 系統，使用 Laravel 11 開發，實作客戶管理、權限管理、產品管理、訂單管理、任務管理等功能。
